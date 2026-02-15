@@ -8,11 +8,11 @@
 //! ## Usage
 //!
 //! ```rust
-//! use mediatypes::application::WWW_FORM_URLENCODED;
+//! use mediatypes::application::X_WWW_FORM_URLENCODED;
 //! use mediatypes::image::PNG;
 //! use mediatypes::text::HTML;
 //!
-//! assert_eq!(WWW_FORM_URLENCODED, "application/x-www-form-urlencoded");
+//! assert_eq!(X_WWW_FORM_URLENCODED, "application/x-www-form-urlencoded");
 //! assert_eq!(PNG, "image/png");
 //! assert_eq!(HTML, "text/html");
 //! ```
@@ -22,6 +22,7 @@
 //! MIME types are organized by their top-level type:
 //! - `application` - Application-specific data
 //! - `audio` - Audio data
+//! - `chemical` - Chemical data and molecular structures
 //! - `font` - Font data
 //! - `image` - Image data
 //! - `message` - Message protocol data
@@ -29,6 +30,8 @@
 //! - `multipart` - Multi-part data
 //! - `text` - Human-readable text
 //! - `video` - Video data
+//! - `x_conference` - Conference-related experimental types
+//! - `x_shader` - Shader-related experimental types
 
 #![warn(missing_docs)]
 #![deny(unsafe_code)]
@@ -37,6 +40,8 @@
 pub mod application;
 /// Audio MIME types
 pub mod audio;
+/// Chemical MIME types
+pub mod chemical;
 /// Font MIME types
 pub mod font;
 /// Image MIME types
@@ -51,6 +56,16 @@ pub mod multipart;
 pub mod text;
 /// Video MIME types
 pub mod video;
+/// Conference-related experimental MIME types
+pub mod x_conference;
+/// Shader-related experimental MIME types
+pub mod x_shader;
+
+/// Helper module for tests - exports all MIME types as a vector
+///
+/// This module is automatically generated and is primarily intended for testing.
+#[doc(hidden)]
+pub mod all_types;
 
 #[cfg(test)]
 mod tests {

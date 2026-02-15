@@ -1,6 +1,6 @@
-//! Multi-part MIME types
+//! Multipart MIME types
 //!
-//! This module contains MIME types for multi-part messages.
+//! This module contains MIME types for multi-part data.
 
 /// `multipart/alternative`
 pub const ALTERNATIVE: &str = "multipart/alternative";
@@ -16,9 +16,6 @@ pub const DIGEST: &str = "multipart/digest";
 
 /// `multipart/encrypted`
 pub const ENCRYPTED: &str = "multipart/encrypted";
-
-/// `multipart/example`
-pub const EXAMPLE: &str = "multipart/example";
 
 /// `multipart/form-data`
 pub const FORM_DATA: &str = "multipart/form-data";
@@ -52,4 +49,3 @@ pub const VOICE_MESSAGE: &str = "multipart/voice-message";
 
 /// `multipart/x-mixed-replace`
 pub const X_MIXED_REPLACE: &str = "multipart/x-mixed-replace";
-
