@@ -1,6 +1,6 @@
 [package]
 name = "mediatypes"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 authors = ["Daniel Lloyd Thomas"]
 description = "A comprehensive collection of MIME types (media types) as string constants"
@@ -12,4 +12,27 @@ license = "MIT OR Apache-2.0"
 keywords = ["mime", "media-types", "http", "content-type", "mime-types"]
 categories = ["web-programming", "api-bindings", "network-programming"]
 
+# Exclude development tools from published package
+exclude = [
+    "examples/",
+    "tools/",
+    "tools/*",
+    "tests/",
+    "target/",
+    "regenerate.sh",
+    "Makefile",
+    "100_PERCENT_COVERAGE.md",
+    "AUTO_GENERATION_SUMMARY.md",
+    "ZERO_DEPENDENCIES.md",
+    "REGENERATE_INSTRUCTIONS.md",
+]
+
 [dependencies]
+# No dependencies! The library is just string constants.
+
+[dev-dependencies]
+serde = { version = "1.0", features = ["derive"] }
+reqwest = { version = "0.12", features = ["blocking", "json"] }
+
+# Generator is an example (not a bin) so it automatically gets dev-dependencies
+# Run with: cargo run --example generate_mime_types
