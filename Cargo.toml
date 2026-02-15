@@ -1,0 +1,15 @@
+[package]
+name = "mediatypes"
+version = "0.1.0"
+edition = "2024"
+authors = ["Daniel Lloyd Thomas"]
+description = "A comprehensive collection of MIME types (media types) as string constants"
+documentation = "https://docs.rs/mediatypes"
+readme = "README.md"
+homepage = "https://github.com/DaKiLloTh/media_types"
+repository = "https://github.com/DaKiLloTh/media_types"
+license = "MIT OR Apache-2.0"
+keywords = ["mime", "media-types", "http", "content-type", "mime-types"]
+categories = ["web-programming", "api-bindings", "network-programming"]
+
+[dependencies]
